@@ -51,6 +51,7 @@ function caesarDecryptGuess(cipherText: string): string {
         const testCipherText = caesarDecrypt(cipherText, testShift);
         const answer = prompt(`${testCipherText}\nDoes this look right (y/n)`);
         if (answer === 'y') {
+            console.log('The correct key is:', testShift);
             return testCipherText;
         }
     }
@@ -59,8 +60,12 @@ function caesarDecryptGuess(cipherText: string): string {
 
 
 caesarDecryptGuess(`
-Ulcly nvuuh npcl fvb bw, ulcly nvuuh sla fvb kvdu
-Ulcly nvuuh ybu hyvbuk huk klzlya fvb
-Ulcly nvuuh thrl fvb jyf, ulcly nvuuh zhf nvvkifl
-Ulcly nvuuh alss h spl huk obya fvb
+Id qt, dg cdi id qt, iwpi xh iwt fjthixdc:
+Lwtiwtg 'ixh cdqatg xc iwt bxcs id hjuutg
+Iwt haxcvh pcs pggdlh du djigpvtdjh udgijct,
+Dg id ipzt pgbh pvpxchi p htp du igdjqath,
+Pcs qn deedhxcv tcs iwtb: id sxt, id hatte
+Cd bdgt; pcs qn p hatte, id hpn lt tcs
+Iwt wtpgi-prwt, pcs iwt iwdjhpcs cpijgpa hwdrzh
+Iwpi Uathw xh wtxg id? 'Ixh p rdchjbbpixdc
 `)
