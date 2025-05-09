@@ -1,12 +1,12 @@
-function caesarEncrypt(plainText: string, shift: number): string {
+export function caesarEncrypt(plainText: string, shift: number): string {
     return '';
 }
 
-function caesarDecript(cipherText: string, shift: number): string {
+export function caesarDecript(cipherText: string, shift: number): string {
     return '';
 }
 
 // Extension
-function caesarDecryptGuess(cipherText: string): string {
+export function caesarDecryptGuess(cipherText: string): string {
     return '';
 }
