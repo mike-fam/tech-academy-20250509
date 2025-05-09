@@ -5,20 +5,24 @@ function caesarEncryptChar(char: string, shift: number): string {
         return char;
     }
     const index = ALPHA.indexOf(char);
-    const newIndex = (index + shift) % ALPHA.length;
+    const newIndex = (((index + shift) % ALPHA.length) + ALPHA.length) % ALPHA.length;
     return ALPHA[newIndex];
 }
 
 export function caesarEncrypt(plainText: string, shift: number): string {
     let result = "";
     for (const char of plainText) {
-        result += caesarEncryptChar(char, shift);
+        let cipherChar = caesarEncryptChar(char.toLowerCase(), shift);
+        if (char === char.toUpperCase()) {
+            cipherChar = cipherChar.toUpperCase();
+        }
+        result += cipherChar;
     }
     return result;
 }
 
-export function caesarDecript(cipherText: string, shift: number): string {
-    return caesarEncrypt(cipherText, ALPHA.length - shift);
+export function caesarDecrypt(cipherText: string, shift: number): string {
+    return caesarEncrypt(cipherText, -shift);
 }
 
 // Extension
