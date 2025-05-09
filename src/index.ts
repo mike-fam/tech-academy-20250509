@@ -2,6 +2,7 @@ const prompt = require('prompt-sync')({ sigint: true });
 
 
 const ALPHA = "abcdefghijklmnopqrstuvwxyz";
+// https://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html
 const CHARACTER_FREQUENCY = ['e', 't', 'a', 'o', 'i', 'n', 's', 'h', 'r', 'd', 'l', 'c', 'u', 'm', 'w', 'f', 'g', 'y', 'p', 'b', 'v', 'k', 'j', 'x', 'q', 'z']
 
 function encryptChar(char: string, shift: number) {
