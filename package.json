@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
+    "prompt-sync": "^4.2.0",
     "ts-node": "^10.9.2"
   }
 }
