@@ -45,6 +45,22 @@ function getSortedCharsByFrequency(input: string): string[] {
 
 function caesarDecryptGuess(cipherText: string): string {
     const sortedCharByFrequency = getSortedCharsByFrequency(cipherText);
+    const mostFrequentChar = sortedCharByFrequency[0];
+    for (const charHeuristic of CHARACTER_FREQUENCY) {
+        const testShift = ALPHA.indexOf(mostFrequentChar) - ALPHA.indexOf(charHeuristic);
+        const testCipherText = caesarDecrypt(cipherText, testShift);
+        const answer = prompt(`${testCipherText}\nDoes this look right (y/n)`);
+        if (answer === 'y') {
+            return testCipherText;
+        }
+    }
     return '';
 }
 
+
+caesarDecryptGuess(`
+Ulcly nvuuh npcl fvb bw, ulcly nvuuh sla fvb kvdu
+Ulcly nvuuh ybu hyvbuk huk klzlya fvb
+Ulcly nvuuh thrl fvb jyf, ulcly nvuuh zhf nvvkifl
+Ulcly nvuuh alss h spl huk obya fvb
+`)
