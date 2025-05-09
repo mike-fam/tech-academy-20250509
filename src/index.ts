@@ -10,11 +10,15 @@ function caesarEncryptChar(char: string, shift: number): string {
 }
 
 export function caesarEncrypt(plainText: string, shift: number): string {
-    return '';
+    let result = "";
+    for (const char of plainText) {
+        result += caesarEncryptChar(char, shift);
+    }
+    return result;
 }
 
 export function caesarDecript(cipherText: string, shift: number): string {
-    return '';
+    return caesarEncrypt(cipherText, ALPHA.length - shift);
 }
 
 // Extension
